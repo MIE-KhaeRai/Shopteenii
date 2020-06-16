@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content')
 <div class="body-content">
-    <div style="padding-left:16px;margin-top:155px">
+    <div class="home">
         <nav class="nav-1" id="nav-1" style="margin-top: 115px;  background-color:white; margin-left:-20px; height:43px">
             <li style="float: left; border: none; margin-left:25px"><a href="#news">&nbsp;&nbsp;&nbsp;&nbsp;&#9776; &nbsp;&nbsp;All Categories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ดูทั้งหมด</i></a></li>
             <li style="float: left; border: none;"><a href="#news">flash Sale</a></li>
@@ -9,11 +9,19 @@
             <li style="float: left; border: none;"><a class="lang" href="#lang">สินค้ามใหม่</a></li>
           </nav>
           <div class="row">
-            <div class="col" style="background-color: white;width:20%; float:left;border-radius:8px;">
+            <div class="col category-bar" >
                 @foreach($category_all as $category)
-                    <li style="border: none;float:left;clear: both;list-style-type:none;height:30px"><a href="#"><h3>{{ $category->category_name }}</h3></a></li>
+                   <a class="category" href="#"><h3>{{ $category->category_name }}</h3><div class="col sub-category" >
+                    {{-- {{ $category_all[3]->data_subdets[0]->sub_name}} --}}
+                    @foreach($category->data_subdets as $value)
+                        <div>{{$value->sub_name}}</div>
+                    @endforeach
+                </div> </a>
                 @endforeach
+
             </div>
+
+
 
               <div class="col" style="background-color: white;width:77%;height:480px; float:right; margin-right:1%; margin-top:20px;border-radius:8px">
                 <div class="mySlides">

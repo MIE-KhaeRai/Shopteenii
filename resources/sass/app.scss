@@ -1,2 +1,46 @@
 @import 'style';
-@import 'main';
+@import 'home';
+@import 'nav';
+@import 'responsive';
+body {
+    margin: 0;
+    height: 10000px;
+    background-color: #efefef;
+}
+
+@font-face {
+    font-family: Prompt-Light;
+    src: url('/fonts/Prompt/Prompt-Light.ttf');
+}
+
+@font-face {
+    font-family: Prompt-Regular;
+    src: url('/fonts/Prompt/Prompt-Regular.ttf');
+}
+
+h2 {
+    font-family: Prompt-Regular, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+h3 {
+    font-family: Prompt-Light, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 1.4px 1.4px 0;
+    display: inline-block;
+    padding: 3.5px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin-bottom: 2px;
+    margin-left: 10px;
+}
+
+//
+//
