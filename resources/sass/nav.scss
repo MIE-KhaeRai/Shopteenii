@@ -91,6 +91,10 @@ li a:hover:not(.active) {
     background-color: pink;
 }
 
+.active {
+    background-color: rgb(104, 21, 35);
+}
+
 .dropdown-content {
     padding: 14px 16px;
     margin-top: 45px;

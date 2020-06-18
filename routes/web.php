@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', 'HomeController@index');
+Route::get('/product', 'ProductController@index');
+
 Route::get('about', function()
 {
     return View::make('pages.about');
@@ -34,9 +36,6 @@ Route::get('contact', function()
 Route::get('Category','CategoryController@index');
 
 
-Route::get('/db-test', function() {
-    if(DB::connection()->getDatabaseName())
-    {
-       echo "conncted sucessfully to database ".DB::connection()->getDatabaseName();
-    }
+Route::get('test', function() {
+    return View::make('test');
  });

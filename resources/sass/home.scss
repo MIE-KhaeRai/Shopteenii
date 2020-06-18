@@ -101,16 +101,20 @@
     clear: both;
     margin-left: 13%;
     list-style-type: none;
-    height: 30px;
+    height: 35px;
     text-decoration: none;
-    color: black;
+    color: rgb(73, 73, 73);
     width: 100%;
+    // display: none;
 }
 
 .category:hover {
-    color: rgb(95, 95, 95);
+    color: rgb(148, 148, 148);
 }
 
+// .category-bar {
+//     display: none;
+// }
 .category:hover .sub-category,
 .category:hover~.sub-category {
     display: block;
@@ -119,12 +123,12 @@
 .sub-category {
     background-color: #fffdfd;
     top: 170px;
-    width: 70%;
-    height: 455px;
+    width: 65%;
+    height: 382px;
     position: absolute;
     z-index: 1;
     margin-left: 17%;
     display: none;
-    padding: 14px 16px;
+    padding: 50px 50px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }

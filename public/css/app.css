@@ -96,14 +96,14 @@
   clear: both;
   margin-left: 13%;
   list-style-type: none;
-  height: 30px;
+  height: 35px;
   text-decoration: none;
-  color: black;
+  color: #494949;
   width: 100%;
 }
 
 .category:hover {
-  color: #5f5f5f;
+  color: #949494;
 }
 
 .category:hover .sub-category,
@@ -114,13 +114,13 @@
 .sub-category {
   background-color: #fffdfd;
   top: 170px;
-  width: 70%;
-  height: 455px;
+  width: 65%;
+  height: 382px;
   position: absolute;
   z-index: 1;
   margin-left: 17%;
   display: none;
-  padding: 14px 16px;
+  padding: 50px 50px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -215,6 +215,10 @@ li a {
 
 li a:hover:not(.active) {
   background-color: pink;
+}
+
+.active {
+  background-color: #681523;
 }
 
 .dropdown-content {
@@ -493,6 +497,83 @@ select {
     width: 100%;
     text-align: left;
   }
+}
+
+.flash-sale {
+  background-color: white;
+  width: 95%;
+  height: 480px;
+  border-radius: 8px;
+  clear: both;
+  position: relative;
+  top: 20px;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
+
+.slider {
+  width: 90%;
+  height: 300px;
+  position: relative;
+  margin: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider .slide {
+  display: flex;
+  position: absolute;
+  left: 0;
+  transition: 0.3s left ease-in-out;
+}
+
+.slider .item {
+  margin-right: 10px;
+}
+
+.slider .item:last-child {
+  margin-right: 0;
+}
+
+.ctrl {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.ctrl-btn {
+  padding: 20px 20px;
+  min-width: 50px;
+  background: #fff;
+  border: none;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  margin-top: -27.5px;
+}
+
+.ctrl-btn.pro-prev {
+  left: 0;
+}
+
+.ctrl-btn.pro-next {
+  right: 0;
+}
+
+.card {
+  top: 30px;
+  width: 184px;
+  height: 300px;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 16px 16px;
 }
 
 body {

@@ -1,7 +1,7 @@
 
   <nav class="nav-1" id="nav-1">
     <li><a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="responsiveFun()">&#9776;</a></li>
-    <li onclick="myFunction()"><a>บันชีผู้ใช้ <i class="arrow down"></i></a></li>
+    <li onclick="myFunction()"><a class="" >บันชีผู้ใช้ <i class="arrow down"></i></a></li>
     <li><a href="#news">วิชลิสส์ของฉัน</a></li>
     <li><a href="#contact">เปรียบเทียบ</a></li>
     <li><a class="lang" href="#lang">ภาษาไทย <i class="arrow down"></i></a></li>
@@ -25,6 +25,7 @@
   <nav class="nav-2 responsive" id="nav-2">
     <li class="nav-li-2" style="width: 60%"><input type="text" class="search"  name="search" placeholder="ค้นหา"></li>
   </nav>
+
 
   <div id="myDropdown" class="dropdown-content" >
       <h2>ยินดีต้อนรับ</h2>
