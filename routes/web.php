@@ -33,7 +33,7 @@ Route::get('contact', function()
     return View::make('pages.contact');
 });
 
-Route::get('Category','CategoryController@index');
+Route::get('category','CategoryController@index');
 
 
 Route::get('test', function() {

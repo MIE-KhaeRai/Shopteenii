@@ -1,9 +1,15 @@
-@import 'style';
-@import 'home';
-@import 'nav';
-@import 'responsive';
-@import 'productslider';
-@import 'product-cart';
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+// Variables
+@import "variables";
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+@import "style";
+@import "home";
+@import "nav";
+@import "responsive";
+@import "productslider";
+@import "product-cart";
 body {
     margin: 0;
     height: 10000px;
@@ -12,82 +18,82 @@ body {
 
 @font-face {
     font-family: DB Heavent-ul;
-    src: url('/fonts/DB Heavent/DBHeaventUlLiv3.2.ttf');
+    src: url("/fonts/DB Heavent/DBHeaventUlLiv3.2.ttf");
 }
 
 @font-face {
     font-family: DB Heavent-ul-italic;
-    src: url('/fonts/DB Heavent/DBHeaventUlLiItv3.2.ttf');
+    src: url("/fonts/DB Heavent/DBHeaventUlLiItv3.2.ttf");
 }
 
 @font-face {
     font-family: DB Heavent-thin;
-    src: url('/fonts/DB Heavent/DBHeaventThinv3.2.ttf');
+    src: url("/fonts/DB Heavent/DBHeaventThinv3.2.ttf");
 }
 
 @font-face {
     font-family: DB Heavent-thin-italic;
-    src: url('/fonts/DB Heavent/DBHeaventThinItv3.2.ttf');
+    src: url("/fonts/DB Heavent/DBHeaventThinItv3.2.ttf");
 }
 
 @font-face {
     font-family: DB Heavent-medium;
-    src: url('/fonts/DB Heavent/DBHeaventMedv3.2.ttf');
+    src: url("/fonts/DB Heavent/DBHeaventMedv3.2.ttf");
 }
 
 @font-face {
     font-family: DB Heavent-medium-italic;
-    src: url('/fonts/DB Heavent/DBHeaventMedItv3.2.ttf');
+    src: url("/fonts/DB Heavent/DBHeaventMedItv3.2.ttf");
 }
 
 @font-face {
     font-family: DB Heavent-Light;
-    src: url('/fonts/DB Heavent/DBHeaventLiv3.2.ttf');
+    src: url("/fonts/DB Heavent/DBHeaventLiv3.2.ttf");
 }
 
 @font-face {
     font-family: DB Heavent-Light-italic;
-    src: url('/fonts/DB Heavent/DBHeaventLiItv3.2.ttf');
+    src: url("/fonts/DB Heavent/DBHeaventLiItv3.2.ttf");
 }
 
 @font-face {
     font-family: DB Heavent-italic;
-    src: url('/fonts/DB Heavent/DBHeaventItv3.2.ttf');
+    src: url("/fonts/DB Heavent/DBHeaventItv3.2.ttf");
 }
 
 @font-face {
     font-family: DB Heavent-bold;
-    src: url('/fonts/DB Heavent/DBHeaventBlkv3.2.ttf');
+    src: url("/fonts/DB Heavent/DBHeaventBlkv3.2.ttf");
 }
 
 @font-face {
     font-family: DB Heavent-blk;
-    src: url('/fonts/DB Heavent/DBHeaventBlkv3.2.ttf');
+    src: url("/fonts/DB Heavent/DBHeaventBlkv3.2.ttf");
 }
 
 @font-face {
     font-family: DB Heavent-blk-italic;
-    src: url('/fonts/DB Heavent/DBHeaventBlkItv3.2.ttf');
+    src: url("/fonts/DB Heavent/DBHeaventBlkItv3.2.ttf");
 }
 
 @font-face {
     font-family: DB Heavent-bold;
-    src: url('/fonts/DB Heavent/DBHeaventBdv3.2.ttf');
+    src: url("/fonts/DB Heavent/DBHeaventBdv3.2.ttf");
 }
 
 @font-face {
     font-family: DB Heavent-bold-italic;
-    src: url('/fonts/DB Heavent/DBHeaventBdItv3.2.ttf');
+    src: url("/fonts/DB Heavent/DBHeaventBdItv3.2.ttf");
 }
 
 @font-face {
     font-family: DB Heavent-regular;
-    src: url('/fonts/DB Heavent/DBHeaventv3.2.ttf');
+    src: url("/fonts/DB Heavent/DBHeaventv3.2.ttf");
 }
 
 @font-face {
     font-family: DB Heavent-regular-italic;
-    src: url('/fonts/DB Heavent/DBHeaventItv3.2.ttf');
+    src: url("/fonts/DB Heavent/DBHeaventItv3.2.ttf");
 }
 
 h1 {
@@ -117,7 +123,7 @@ h4 {
 }
 
 .nav-home,
-input[type=text],
+input[type="text"],
 select {
     font-family: DB Heavent-medium, Helvetica, sans-serif;
     font-size: 20px;

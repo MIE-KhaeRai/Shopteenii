@@ -21,7 +21,7 @@
     {{-- <img class="logo col-2 col-s-2"  src="/img/logo_78.png" alt=""> --}}
     {{-- <img class="logo col-2 col-s-2"  src="/img/logo.png" alt=""> --}}
 
-    <img class="logo logo1" src="/img/logo1.png" />
+    <a  href="/"><img class="logo logo1" src="/img/logo1.png"/></a>
     <img class="logo logo2" id="logo" src="/img/logo2.png"  />
     <img src="/img/smart-cart.svg" id="basket" class="logo basket" >
     <img src="/img/notification.svg" id="notification" class="logo notification" >

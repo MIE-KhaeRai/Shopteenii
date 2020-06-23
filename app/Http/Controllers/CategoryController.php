@@ -11,11 +11,18 @@ class CategoryController extends Controller
     public function index()
     {
 
+        $category_all = [];
+        $category =  Category::orderBy('category_name','ASC')->get();
+        foreach ($category as $key => $value) {
+            if($value->data_subdets!="[]"){
+                $value['data_subdets'] = json_decode($value->data_subdets);
 
-
-        $category_all =  Category::where('category_name','เสื้อผ้าแฟชั่นผู้ชาย')->pluck('data_subdets');
-        // return view('pages.home', compact('category_all', 'category_all'));
-
+            }else{
+                $value['data_subdets'] = [['sub_name'=>'no']];
+            }
+            array_push($category_all,json_decode($value));
+        }
+        // return $category_all;
         return view('pages.category', compact('category_all'));
     }
 }
