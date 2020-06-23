@@ -11,23 +11,116 @@ body {
 }
 
 @font-face {
-    font-family: Prompt-Light;
-    src: url('/fonts/Prompt/Prompt-Light.ttf');
+    font-family: DB Heavent-ul;
+    src: url('/fonts/DB Heavent/DBHeaventUlLiv3.2.ttf');
 }
 
 @font-face {
-    font-family: Prompt-Regular;
-    src: url('/fonts/Prompt/Prompt-Regular.ttf');
+    font-family: DB Heavent-ul-italic;
+    src: url('/fonts/DB Heavent/DBHeaventUlLiItv3.2.ttf');
+}
+
+@font-face {
+    font-family: DB Heavent-thin;
+    src: url('/fonts/DB Heavent/DBHeaventThinv3.2.ttf');
+}
+
+@font-face {
+    font-family: DB Heavent-thin-italic;
+    src: url('/fonts/DB Heavent/DBHeaventThinItv3.2.ttf');
+}
+
+@font-face {
+    font-family: DB Heavent-medium;
+    src: url('/fonts/DB Heavent/DBHeaventMedv3.2.ttf');
+}
+
+@font-face {
+    font-family: DB Heavent-medium-italic;
+    src: url('/fonts/DB Heavent/DBHeaventMedItv3.2.ttf');
+}
+
+@font-face {
+    font-family: DB Heavent-Light;
+    src: url('/fonts/DB Heavent/DBHeaventLiv3.2.ttf');
+}
+
+@font-face {
+    font-family: DB Heavent-Light-italic;
+    src: url('/fonts/DB Heavent/DBHeaventLiItv3.2.ttf');
+}
+
+@font-face {
+    font-family: DB Heavent-italic;
+    src: url('/fonts/DB Heavent/DBHeaventItv3.2.ttf');
+}
+
+@font-face {
+    font-family: DB Heavent-bold;
+    src: url('/fonts/DB Heavent/DBHeaventBlkv3.2.ttf');
+}
+
+@font-face {
+    font-family: DB Heavent-blk;
+    src: url('/fonts/DB Heavent/DBHeaventBlkv3.2.ttf');
+}
+
+@font-face {
+    font-family: DB Heavent-blk-italic;
+    src: url('/fonts/DB Heavent/DBHeaventBlkItv3.2.ttf');
+}
+
+@font-face {
+    font-family: DB Heavent-bold;
+    src: url('/fonts/DB Heavent/DBHeaventBdv3.2.ttf');
+}
+
+@font-face {
+    font-family: DB Heavent-bold-italic;
+    src: url('/fonts/DB Heavent/DBHeaventBdItv3.2.ttf');
+}
+
+@font-face {
+    font-family: DB Heavent-regular;
+    src: url('/fonts/DB Heavent/DBHeaventv3.2.ttf');
+}
+
+@font-face {
+    font-family: DB Heavent-regular-italic;
+    src: url('/fonts/DB Heavent/DBHeaventItv3.2.ttf');
+}
+
+h1 {
+    font-family: DB Heavent-medium, Helvetica, sans-serif;
+    font-size: 2.1vw;
 }
 
 h2 {
-    font-family: Prompt-Regular, Helvetica, sans-serif;
-    font-size: 14px;
+    font-family: DB Heavent-regular, Helvetica, sans-serif;
+    font-size: 1.8vw;
 }
 
 h3 {
-    font-family: Prompt-Light, Helvetica, sans-serif;
-    font-size: 13px;
+    font-family: DB Heavent-light, Helvetica, sans-serif;
+    font-size: 1.3vw;
+}
+
+h4 {
+    font-family: DB Heavent-thin, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.nav-1 {
+    font-family: DB Heavent-light, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #0f0f0f;
+}
+
+.nav-home,
+input[type=text],
+select {
+    font-family: DB Heavent-medium, Helvetica, sans-serif;
+    font-size: 20px;
 }
 
 .arrow {

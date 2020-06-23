@@ -3,22 +3,25 @@
 
 <div class="body-content">
     <div class="home">
-        <nav class="nav-1" id="nav-1" style="margin-top: 115px;  background-color:white; margin-left:-20px; height:43px">
-            <li style="float: left; border: none; margin-left:25px"><a href="#news">&nbsp;&nbsp;&nbsp;&nbsp;&#9776; &nbsp;&nbsp;All Categories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ดูทั้งหมด</i></a></li>
-            <li style="float: left; border: none;"><a href="#news">flash Sale</a></li>
+        <nav class="nav-1 nav-home" id="nav-home" >
+            <li style="float: left; border: none;"><a href="#news">All Categories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ดูทั้งหมด</i></a></li>
+            <li style="float: left; border: none;"><a href="#news">Flash Sale</a></li>
             <li style="float: left; border: none;"><a href="#contact">ขายดีประจำสัปดาห์</a></li>
-            <li style="float: left; border: none;"><a class="lang" href="#lang">สินค้ามใหม่</a></li>
+            <li style="float: left; border: none;"><a class="lang" href="#new-product">สินค้ามใหม่</a></li>
         </nav>
         <div class="row">
             <div class="col category-bar" >
                 @foreach($category_all as $category)
                 <?php $banner = explode('.',$category->banner)?>
-                    <a class="category" href="#"><h3><img src="/img/category/{{$banner[0]}}.svg" alt="" style="width: 20px; transform: translate(-50%, 30%)"> {{ $category->category_name }}</h3>
+                    <a class="category" href="#">
+                        <h4 style="margin-top: 5px">
+                            <img src="/img/category/{{$banner[0]}}.svg" alt="" style="width: 20px; transform: translate(-50%, 30%)"> {{ $category->category_name }}
+                        </h4>
                         <div class="sub-category">
                             <div style="width:75%">
                                 <div class="column" >
                                     @foreach($category->data_subdets as $value)
-                                        <h3 style="float: left;width:30%;color:#747474;margin:10px">{{$value->sub_name}}</h3>
+                                        <h4 style="float: left;width:30%;color:#747474;margin:10px">{{$value->sub_name}}</h4>
                                     @endforeach
                                 </div>
                             </div>
@@ -28,65 +31,87 @@
                                 </div>
                             </div>
                         </div>
-
                     </a>
                 @endforeach
             </div>
-                <div class="col" style="background-color: white;width:77%;height:480px; float:right; margin-right:1%; margin-top:20px;border-radius:8px">
-                    <div class="mySlides">
-                        <img src="/img/slides1 copy.png" style="width:100%;height:480px;border-radius:8px">
-                    </div>
-                    <div class="mySlides">
-                        <img src="/img/slides2.jpg" style="width:100%;height:480px;border-radius:8px">
-                    </div>
-                    <div class="mySlides">
-                        <img src="/img/slides3.jpg" style="width:100%;height:480px;border-radius:8px">
-                    </div>
-
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" style="margin-right:1%;" onclick="plusSlides(1)">&#10095;</a>
-
-                    <div style="text-align:center;clear: both;">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                    </div>
+            <div class="col" style="background-color: white;width:77%;height:480px; float:right; margin-right:1%; margin-top:20px;border-radius:8px">
+                <div class="mySlides">
+                    <img src="/img/slides1 copy.png" style="width:100%;height:480px;border-radius:8px">
                 </div>
+                <div class="mySlides">
+                    <img src="/img/slides2.jpg" style="width:100%;height:480px;border-radius:8px">
+                </div>
+                <div class="mySlides">
+                    <img src="/img/slides3.jpg" style="width:100%;height:480px;border-radius:8px">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" style="margin-right:1%;" onclick="plusSlides(1)">&#10095;</a>
+
+                <div style="text-align:center;clear: both;">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="col flash-sale">
                 <h1>FLASH SALE<h1>
+                    <hr style="opacity: 0.3">
                 <div class="slider" id="slider">
                     <div class="slide" id="slide">
-                    @foreach ($product_all as $product)
-                        <div class="item" style="width: 400px">
-                            {{-- <img src="/img/logo.png"> --}}
-
-                            <div style="width: 200px">
-                                {{-- {!!$product->description!!} --}}
-                            </div>
-
-                            <h3>{{$product->title}}</h3>
-                        </div>
-                    @endforeach
+                        <?php
+                        $product_flash = [];
+                        $class = "flash";
+                        foreach ($product_all as $key => $value) {
+                           if($value->front_image!='0'&&$value->front_image!=null){
+                                array_push($product_flash,$value);
+                           }
+                        }
+                        ?>
+                        @foreach ($product_flash as $item)
+                            @include('component.product-cart')
+                        @endforeach
                     </div>
-                    <button class="ctrl-btn pro-prev">Prev</button>
-                    <button class="ctrl-btn pro-next">Next</button>
+
                 </div>
+                <button class="ctrl-btn pro-prev">Prev</button>
+                <button class="ctrl-btn pro-next">Next</button>
+            </div>
+        </div>
+        <div id="new-product" class="row">
+            <div style=" margin-left: 3%;
+            margin-right: 3%;
+            margin-top:50px;
+            background-color:rgb(255, 255, 255);
+            border-radius: 8px;
+            clear: both;
+            position: relative;
+            color: #666666;
+            padding: 30px 50px;">
+               <h1 style="display: inline">สินค้ามใหม่</h1>
+               <h1  style="display: inline;margin-left:50px">สินค้ามแนะนำ</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div  style=" margin-left: 2%;
+            margin-right: 2%;">
+                <?php  $class = "";?>
+                @foreach ($product_all as $item)
+                    @include('component.product-cart')
+                @endforeach
+            </div>
+        </div>
+        <div class="row">
+            <div  style=" margin-left: 2%;
+            margin-right: 2%;">
+                <?php  $class = "";?>
 
             </div>
-            <div class="col ">
-                @include('component.product-cart')
-
-                {{-- @yield('product-cart') --}}
-            </div>
-
         </div>
     </div>
 </div>
-
-
-
-
-
 
 
 

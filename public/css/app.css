@@ -4,7 +4,16 @@
 
 .home {
   padding-left: 16px;
+  padding-right: 16px;
   padding-top: 155px;
+}
+
+.nav-home {
+  margin-top: 115px;
+  background-color: white !important;
+  margin-left: -20px;
+  height: 43px;
+  width: 120%;
 }
 
 .prev,
@@ -82,6 +91,7 @@
 }
 
 .category-bar {
+  padding-top: 20px;
   background-color: white;
   width: 20%;
   float: left;
@@ -96,10 +106,10 @@
   clear: both;
   margin-left: 13%;
   list-style-type: none;
-  height: 35px;
   text-decoration: none;
   color: #494949;
   width: 100%;
+  height: 40px;
 }
 
 .category:hover {
@@ -137,8 +147,6 @@ nav {
 .nav-1 {
   background-color: #efefef;
   top: 0px;
-  font-family: Prompt-Light, Helvetica, sans-serif;
-  font-size: 14px;
   overflow: hidden;
 }
 
@@ -148,26 +156,24 @@ nav {
   margin-left: 10%;
   z-index: 3;
   transform: translate(-50%, -50%);
+  width: 3.33%;
+  background-color: white;
+}
+
+.logo1 {
+  width: 14%;
+}
+
+.logo2 {
+  width: 7.33%;
 }
 
 .basket {
-  position: fixed;
-  top: 80px;
-  margin-left: 3%;
-  background-color: white;
-  z-index: 3;
   margin-left: 87%;
-  transform: translate(-50%, -50%);
 }
 
 .notification {
-  position: fixed;
-  top: 80px;
-  margin-left: 3%;
-  background-color: white;
-  z-index: 3;
   margin-left: 92%;
-  transform: translate(-50%, -50%);
 }
 
 .vender:before {
@@ -186,10 +192,6 @@ nav {
   top: 45px;
   overflow: hidden;
   height: 70px;
-}
-
-.nav-2 .responsive {
-  top: 200px !important;
 }
 
 .nav-1 .icon {
@@ -243,7 +245,6 @@ li a:hover:not(.active) {
   background-color: #42294f;
   font-family: Prompt-Regular, Helvetica, sans-serif;
   border: none;
-  font-size: 13px;
   color: white;
 }
 
@@ -255,7 +256,6 @@ li a:hover:not(.active) {
   border: none;
   background-color: #f8eaf3;
   font-family: Prompt-Regular, Helvetica, sans-serif;
-  font-size: 13px;
   color: #c75ba1;
 }
 
@@ -267,7 +267,6 @@ li a:hover:not(.active) {
   border: solid 2px;
   border-color: #3b5998;
   font-family: Prompt-Regular, Helvetica, sans-serif;
-  font-size: 13px;
   color: #3b5998;
 }
 
@@ -279,13 +278,11 @@ li a:hover:not(.active) {
   border: solid 2px;
   border-color: #dc4e41;
   font-family: Prompt-Regular, Helvetica, sans-serif;
-  font-size: 13px;
   color: #dc4e41;
 }
 
 .dropdown-content a {
   color: black;
-  padding: 12px 160px;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -327,17 +324,53 @@ select {
   width: 100%;
   height: 45px;
   padding: 12px 50px;
-  display: inline-block;
   border: 3px solid #c75ba1;
   border-radius: 6px;
   box-sizing: border-box;
-  font-family: Prompt-Light, Helvetica, sans-serif;
-  font-size: 18px;
   margin-left: 35%;
   margin-top: 13px;
 }
 
-@media only screen and (min-width: 0px) {
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+  [class*=col-] {
+    width: 100%;
+  }
+
+  .logo2 {
+    display: block;
+  }
+
+  .logo1 {
+    display: none;
+  }
+}
+
+.col-m-6 {
+  width: 45.5%;
+  height: 60vw !important;
+  margin-left: 2% !important;
+}
+
+.col-m-6 h1 {
+  font-size: 8vw;
+}
+
+.col-m-6 h3 {
+  font-size: 4.4vw;
+}
+
+.col-m-6 img {
+  width: 40vw;
+  height: 40vw;
+}
+
+.col-m-4 {
+  width: 33.33%;
+}
+
+@media only screen and (min-width: 600px) {
   /* For tablets: */
 
   .col-s-025 {
@@ -352,12 +385,31 @@ select {
     width: 8.33%;
   }
 
+  .col-s-15 {
+    width: 12.66%;
+  }
+
   .col-s-2 {
     width: 16.66%;
   }
 
   .col-s-3 {
-    width: 25%;
+    width: 21.7%;
+    height: 40vw !important;
+    margin-left: 1% !important;
+  }
+
+  .col-s-3 h1 {
+    font-size: 4vw;
+  }
+
+  .col-s-3 h3 {
+    font-size: 2.2vw;
+  }
+
+  .col-s-3 img {
+    width: 20vw;
+    height: 20vw;
   }
 
   .col-s-4 {
@@ -412,6 +464,25 @@ select {
     width: 8.33%;
   }
 
+  .col-15 {
+    width: 13.5%;
+    height: 20vw !important;
+    margin-left: 1% !important;
+  }
+
+  .col-15 h1 {
+    font-size: 2.1vw;
+  }
+
+  .col-15 h3 {
+    font-size: 1.3vw;
+  }
+
+  .col-15 img {
+    width: 12.5vw;
+    height: 12.5vw;
+  }
+
   .col-2 {
     width: 16.66%;
   }
@@ -455,6 +526,10 @@ select {
   .col-12 {
     width: 100%;
   }
+
+  .logo2 {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -470,6 +545,18 @@ select {
 
   .nav-1 .responsive {
     position: fixed;
+  }
+
+  .responsive1 {
+    top: 260px !important;
+  }
+
+  .responsive2 {
+    top: 295px !important;
+  }
+
+  .responsive3 {
+    margin-top: 325px !important;
   }
 
   .nav-1.responsive .icon {
@@ -501,19 +588,21 @@ select {
 
 .flash-sale {
   background-color: white;
-  width: 95%;
-  height: 480px;
+  height: 440px;
   border-radius: 8px;
   clear: both;
   position: relative;
   top: 20px;
   margin: 0 auto;
+  padding-top: 20px;
   padding: 20px 20px;
+  margin-left: 3%;
+  margin-right: 3%;
 }
 
 .slider {
-  width: 90%;
-  height: 300px;
+  width: 100%;
+  height: 400px;
   position: relative;
   margin: auto;
   overflow-x: scroll;
@@ -532,7 +621,7 @@ select {
 }
 
 .slider .item {
-  margin-right: 10px;
+  margin-right: -50px;
 }
 
 .slider .item:last-child {
@@ -567,13 +656,22 @@ select {
 }
 
 .card {
-  top: 30px;
-  width: 184px;
-  height: 300px;
+  margin-top: 30px;
+  margin-left: 1%;
+  height: 20vw;
   background-color: white;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 2%;
   position: relative;
-  padding: 16px 16px;
+  padding: 1% 1%;
+  float: left;
+}
+
+.flash {
+  margin-top: 10px !important;
+  background-color: white;
+  padding: 0% 0%;
+  box-shadow: none;
 }
 
 body {
@@ -583,23 +681,116 @@ body {
 }
 
 @font-face {
-  font-family: Prompt-Light;
-  src: url("/fonts/Prompt/Prompt-Light.ttf");
+  font-family: DB Heavent-ul;
+  src: url("/fonts/DB Heavent/DBHeaventUlLiv3.2.ttf");
 }
 
 @font-face {
-  font-family: Prompt-Regular;
-  src: url("/fonts/Prompt/Prompt-Regular.ttf");
+  font-family: DB Heavent-ul-italic;
+  src: url("/fonts/DB Heavent/DBHeaventUlLiItv3.2.ttf");
+}
+
+@font-face {
+  font-family: DB Heavent-thin;
+  src: url("/fonts/DB Heavent/DBHeaventThinv3.2.ttf");
+}
+
+@font-face {
+  font-family: DB Heavent-thin-italic;
+  src: url("/fonts/DB Heavent/DBHeaventThinItv3.2.ttf");
+}
+
+@font-face {
+  font-family: DB Heavent-medium;
+  src: url("/fonts/DB Heavent/DBHeaventMedv3.2.ttf");
+}
+
+@font-face {
+  font-family: DB Heavent-medium-italic;
+  src: url("/fonts/DB Heavent/DBHeaventMedItv3.2.ttf");
+}
+
+@font-face {
+  font-family: DB Heavent-Light;
+  src: url("/fonts/DB Heavent/DBHeaventLiv3.2.ttf");
+}
+
+@font-face {
+  font-family: DB Heavent-Light-italic;
+  src: url("/fonts/DB Heavent/DBHeaventLiItv3.2.ttf");
+}
+
+@font-face {
+  font-family: DB Heavent-italic;
+  src: url("/fonts/DB Heavent/DBHeaventItv3.2.ttf");
+}
+
+@font-face {
+  font-family: DB Heavent-bold;
+  src: url("/fonts/DB Heavent/DBHeaventBlkv3.2.ttf");
+}
+
+@font-face {
+  font-family: DB Heavent-blk;
+  src: url("/fonts/DB Heavent/DBHeaventBlkv3.2.ttf");
+}
+
+@font-face {
+  font-family: DB Heavent-blk-italic;
+  src: url("/fonts/DB Heavent/DBHeaventBlkItv3.2.ttf");
+}
+
+@font-face {
+  font-family: DB Heavent-bold;
+  src: url("/fonts/DB Heavent/DBHeaventBdv3.2.ttf");
+}
+
+@font-face {
+  font-family: DB Heavent-bold-italic;
+  src: url("/fonts/DB Heavent/DBHeaventBdItv3.2.ttf");
+}
+
+@font-face {
+  font-family: DB Heavent-regular;
+  src: url("/fonts/DB Heavent/DBHeaventv3.2.ttf");
+}
+
+@font-face {
+  font-family: DB Heavent-regular-italic;
+  src: url("/fonts/DB Heavent/DBHeaventItv3.2.ttf");
+}
+
+h1 {
+  font-family: DB Heavent-medium, Helvetica, sans-serif;
+  font-size: 2.1vw;
 }
 
 h2 {
-  font-family: Prompt-Regular, Helvetica, sans-serif;
-  font-size: 14px;
+  font-family: DB Heavent-regular, Helvetica, sans-serif;
+  font-size: 1.8vw;
 }
 
 h3 {
-  font-family: Prompt-Light, Helvetica, sans-serif;
-  font-size: 13px;
+  font-family: DB Heavent-light, Helvetica, sans-serif;
+  font-size: 1.3vw;
+}
+
+h4 {
+  font-family: DB Heavent-thin, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.nav-1 {
+  font-family: DB Heavent-light, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #0f0f0f;
+}
+
+.nav-home,
+input[type=text],
+select {
+  font-family: DB Heavent-medium, Helvetica, sans-serif;
+  font-size: 20px;
 }
 
 .arrow {
