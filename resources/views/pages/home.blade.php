@@ -34,15 +34,15 @@
                     </a>
                 @endforeach
             </div>
-            <div class="col" style="background-color: white;width:77%;height:480px; float:right; margin-right:1%; margin-top:20px;border-radius:8px">
+            <div class="col slide-bar">
                 <div class="mySlides">
-                    <img src="/img/slides1 copy.png" style="width:100%;height:480px;border-radius:8px">
+                    <img src="/img/slides1 copy.png" style="width:100%;height:35vw;border-radius:8px">
                 </div>
                 <div class="mySlides">
-                    <img src="/img/slides2.jpg" style="width:100%;height:480px;border-radius:8px">
+                    <img src="/img/slides2.jpg" style="width:100%;height:35vw;border-radius:8px">
                 </div>
                 <div class="mySlides">
-                    <img src="/img/slides3.jpg" style="width:100%;height:480px;border-radius:8px">
+                    <img src="/img/slides3.jpg" style="width:100%;height:35vw;border-radius:8px">
                 </div>
 
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
