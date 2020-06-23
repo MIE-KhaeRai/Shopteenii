@@ -4,7 +4,7 @@
 <div class="body-content">
     <div class="home">
         <nav class="nav-1 nav-home" id="nav-home" >
-            <li style="float: left; border: none;"><a href="#news">All Categories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ดูทั้งหมด</i></a></li>
+            <li style="float: left; border: none;"><a href="category">All Categories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ดูทั้งหมด</i></a></li>
             <li style="float: left; border: none;"><a href="#news">Flash Sale</a></li>
             <li style="float: left; border: none;"><a href="#contact">ขายดีประจำสัปดาห์</a></li>
             <li style="float: left; border: none;"><a class="lang" href="#new-product">สินค้ามใหม่</a></li>
@@ -80,7 +80,14 @@
                 <button class="ctrl-btn pro-next">Next</button>
             </div>
         </div>
-        <div id="new-product" class="row">
+        <div id="new-product" class="row" style="margin-top: 50px">
+                <img class="col-4" src="/img/promotion1.png" alt="">
+
+                <img class="col-4" src="/img/promotion2.png" alt="">
+
+                <img class="col-4" src="/img/promotion3.png" alt="">
+        </div>
+        <div  class="row">
             <div style=" margin-left: 3%;
             margin-right: 3%;
             margin-top:50px;
@@ -103,11 +110,7 @@
                 @endforeach
             </div>
         </div>
-        <div class="row">
-            <img src="" alt="">
 
-
-            </div>
         </div>
     </div>
 </div>

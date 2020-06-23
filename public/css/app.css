@@ -492,7 +492,7 @@ select {
   }
 
   .col-4 {
-    width: 33.33%;
+    width: 33%;
   }
 
   .col-5 {
@@ -665,7 +665,6 @@ select {
   position: relative;
   padding: 1% 1%;
   float: left;
-  transition: all 0.2s ease-in-out 0s;
 }
 
 .flash {
