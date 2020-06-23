@@ -665,6 +665,7 @@ select {
   position: relative;
   padding: 1% 1%;
   float: left;
+  transition: all 0.2s ease-in-out 0s;
 }
 
 .flash {
@@ -672,6 +673,10 @@ select {
   background-color: white;
   padding: 0% 0%;
   box-shadow: none;
+}
+
+.card:hover {
+  opacity: 0.6;
 }
 
 body {

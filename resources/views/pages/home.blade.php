@@ -104,9 +104,8 @@
             </div>
         </div>
         <div class="row">
-            <div  style=" margin-left: 2%;
-            margin-right: 2%;">
-                <?php  $class = "";?>
+            <img src="" alt="">
+
 
             </div>
         </div>
@@ -206,7 +205,14 @@ function getCount(parent, getChildrensChildren) {
 }
 
 
-
+ $('a[href^="#"]').click(function(event) {
+  var id = $(this).attr("href");
+  var target = $(id).offset().top;
+  $('html, body').animate({
+    scrollTop: target
+  }, 500);
+  event.preventDefault();
+});
 
     </script>
 @stop
