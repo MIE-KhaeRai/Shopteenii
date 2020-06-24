@@ -25,10 +25,19 @@
                 $pass = $request->input('password');
                 if(Auth::attempt(['email' => $email,'password'=> $pass])){
                        $user = Auth::user();   
-                        return $user;
-                    //   if($USER_TYPE == 1){
-                    //         return redirect()->intended('/admin/index');
-                    //     }
+                        // return $user->name;
+                      if($user->name == "admin"){
+                        return response()->json(['message'=>"Welcome Admin"]);
+                      }
+                       else if($user->name == "vendor"){
+                            return response()->json(['message'=>"Welcome Vendor"]);
+                       }
+                            
+                           else if($user->name == "customer"){
+                                return response()->json(['message'=>"Welcome Customer"]);
+                                }
+                            
+                            
                 }
 
                 else{
