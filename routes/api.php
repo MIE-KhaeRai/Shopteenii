@@ -14,16 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
 
-//Login function
-Route::get('login','LoginController@login');
+// Login function
+Route::get('login','LoginController@postProcess');
 
-//Register function
-Route::post('register','RegisterController@register');
+// //Register function
+// Route::post('register','RegisterController@register');
 
 
 

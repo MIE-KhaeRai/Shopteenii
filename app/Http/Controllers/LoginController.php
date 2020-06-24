@@ -20,21 +20,20 @@
                 }  
         }
                     
-            public function postProcess(LoginRequest $request){
+            public function postProcess(Request $request){
                 $email = $request->input('email');
                 $pass = $request->input('password');
-                if(Auth::attempt(['email'=> request,'password'=> request])){
+                if(Auth::attempt(['email' => $email,'password'=> $pass])){
                        $user = Auth::user();   
-                        
-
-
-
+                        return $user;
                     //   if($USER_TYPE == 1){
                     //         return redirect()->intended('/admin/index');
                     //     }
                 }
+
                 else{
-                    return redirect()->back()->with('message',"Error!! Email or password Incorrect. \nPlease try again");
+                    
+                    return response()->json(['message'=>"Error!! Email or password Incorrect. Please try again"],400);
                 }                                                  
             }
             public function logout(Request $request){
