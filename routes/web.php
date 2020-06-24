@@ -39,3 +39,11 @@ Route::get('category','CategoryController@index');
 Route::get('test', function() {
     return View::make('test');
  });
+
+ Route::get('/login',function(){
+    return View::make('pages.login');
+
+ })->name('login');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

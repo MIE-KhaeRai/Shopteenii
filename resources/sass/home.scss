@@ -6,7 +6,7 @@
 .home {
     padding-left: 16px;
     padding-right: 16px;
-    padding-top: 155px;
+    padding-top: 155px
 }
 
 .nav-home {
@@ -14,7 +14,7 @@
     background-color: white !important;
     margin-left: -20px;
     height: 43px;
-    width: 120%;
+    width: 120%
 }
 
 .prev,
@@ -101,9 +101,8 @@
     width: 20%;
     float: left;
     border-radius: 8px;
-    height: 35vw;
+    height: 500px;
     overflow: scroll;
-    // display: none;
 }
 
 .category {
@@ -121,8 +120,6 @@
 
 .category:hover {
     color: rgb(148, 148, 148);
-    // background-color: #fffdfd !important;
-    // box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
 }
 
 // .category-bar {
@@ -144,12 +141,4 @@
     display: none;
     padding: 50px 50px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-}
-
-.slide-bar {
-    width: 77%;
-    float: right;
-    margin-right: 1%;
-    margin-top: 20px;
-    border-radius: 8px;
 }
