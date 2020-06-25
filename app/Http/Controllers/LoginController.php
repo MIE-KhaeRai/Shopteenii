@@ -44,11 +44,5 @@
                     
                     return response()->json(['message'=>"Error!! Email or password Incorrect. Please try again"],400);
                 }                                                  
-            }
-            public function logout(Request $request){
-       
-            }
-
-
-        
+            }        
     }
