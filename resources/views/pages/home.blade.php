@@ -9,7 +9,7 @@
             <li style="float: left; border: none;"><a href="#contact">ขายดีประจำสัปดาห์</a></li>
             <li style="float: left; border: none;"><a class="lang" href="#new-product">สินค้ามใหม่</a></li>
         </nav>
-        <div class="row">
+        <div class="row" >
             <div class="col category-bar" >
                 @foreach($category_all as $category)
                 <?php $banner = explode('.',$category->banner)?>

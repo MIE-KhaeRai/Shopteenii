@@ -3,7 +3,7 @@
 // Variables
 @import "variables";
 // Bootstrap
-//@import "~bootstrap/scss/bootstrap";
+// @import "~bootstrap/scss/bootstrap";
 @import "style";
 @import "home";
 @import "nav";
@@ -98,22 +98,18 @@ body {
 
 h1 {
     font-family: DB Heavent-medium, Helvetica, sans-serif;
-    font-size: 2.1vw;
 }
 
 h2 {
     font-family: DB Heavent-regular, Helvetica, sans-serif;
-    font-size: 1.8vw;
 }
 
 h3 {
     font-family: DB Heavent-light, Helvetica, sans-serif;
-    font-size: 1.3vw;
 }
 
 h4 {
     font-family: DB Heavent-thin, Helvetica, sans-serif;
-    font-size: 18px;
 }
 
 .nav-1 {
@@ -141,6 +137,11 @@ select {
     -webkit-transform: rotate(45deg);
     margin-bottom: 2px;
     margin-left: 10px;
+}
+
+a {
+    color: black;
+    text-decoration-line: none;
 }
 
 //

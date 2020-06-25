@@ -1,157 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <style>
-        header {
-  height: 50px;
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  --contentWidth: 400px;
+  padding: 1rem;
+  scrollbar-width: 20px;
+}
+body::-webkit-scrollbar {
+  width: 20px;
+}
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
 
-nav {
-  text-align: center;
-  padding: 10px;
-  margin-top: 20px;
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
 }
-
-nav a {
-  color: #000000;
-  transition: all 1s ease-in-out 0s;
-  text-decoration: none;
-  display: inline-block;
-  padding: 5px;
-  border-bottom: 2px solid transparent;
+.full-width {
+  background: lightcoral;
+  width: calc(100vw - 20px);
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 0;
 }
-
-nav a:link {
-  color: #000000;
-  text-decoration-line: none;
+main, .full-width-inside {
+  max-width: var(--contentWidth);
+  margin: 0 auto;
 }
-
-nav a:nth-of-type(1):hover {
-  border-color: rgb(255, 29, 142);
+.full-width-inside {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
-
-nav a:nth-of-type(2):hover {
-  border-color: rgb(133, 52, 146);
-}
-
-nav a:nth-of-type(3):hover {
-  border-color: rgb(255, 128, 55);
-}
-
-nav a:nth-of-type(4):hover {
-  border-color: rgb(0, 182, 223);
-}
-
-nav a:nth-of-type(5):hover {
-  border-color: rgb(63, 190, 150);
-}
-
-nav a:nth-of-type(6):hover {
-  border-color: rgb(255, 222, 32);
-}
-
-nav a:hover {
-  color: #000000;
-}
-
-#logo {
-  width: 100%;
-  max-width: 100%;
-  height: 750px;
-}
-
-#whatwedo {
-  width: 100%;
-  max-width: 100%;
-  height: 750px;
-}
-
-#whoweare {
-  width: 100%;
-  max-width: 100%;
-  height: 750px;
-}
-
-#partners {
-  width: 100%;
-  max-width: 100%;
-  height: 750px;
-}
-
-#contact {
-  width: 100%;
-  max-width: 100%;
-  height: 750px;
-}
-    </style>
+</style>
 </head>
 <body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<header>
-  <nav>
-    <a href="#logo">Home</a>
-    <a href="#whatwedo">What we do</a>
-    <a href="#whoweare">Who we are</a>
-    <a href="#partners">Who we work with</a>
-    <a href="#contact">Say hello</a>
-    <a href="Blog">Blog</a>
-  </nav>
+<main>
 
-</header>
+    <p>This approach uses negative margins and padding to extend the background in both directions. This works great if you're using a single background color for the bar.</p>
 
-<section id="logo">Logo</section>
+    <section class="full-width">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos unde autem exercitationem doloremque! Aliquid, ut dolorem voluptas quos earum vitae ipsa rem voluptate eum ab quisquam at, corrupti officia totam!</p>
+    </section>
 
-<section id="whatwedo">What we do </section>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi modi consectetur officia dolorum, consequatur autem ipsum odit corrupti vero, suscipit, error laboriosam vel recusandae architecto dignissimos id reprehenderit aperiam itaque!</p>
 
-<section id="whoweare"> Who we are </section>
+  </main>
 
-<section id="partners"> Our Partners </section>
-
-<section id="contact"> Contact </section>
-
-<script>
-    $('a[href^="#"]').click(function(event) {
-  var id = $(this).attr("href");
-  var target = $(id).offset().top;
-  $('html, body').animate({
-    scrollTop: target
-  }, 500);
-  event.preventDefault();
-});
-
-function getTargetTop(elem) {
-  var id = elem.attr("href");
-  var offset = 60;
-  return $(id).offset().top - offset;
-}
-
-
-$(window).scroll(function(e) {
-  isSelected($(window).scrollTop())
-});
-
-var sections = $('a[href^="#"]');
-
-function isSelected(scrolledTo) {
-
-  var threshold = 100;
-  var i;
-
-  for (i = 0; i < sections.length; i++) {
-    var section = $(sections[i]);
-    var target = getTargetTop(section);
-
-    if (scrolledTo > target - threshold && scrolledTo < target + threshold) {
-      sections.removeClass("active");
-      section.addClass("active");
-    }
-
-  };
-}
-</script>
 </body>
 </html>
