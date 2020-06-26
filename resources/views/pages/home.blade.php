@@ -1,15 +1,28 @@
 @extends('layouts.default')
 @section('content')
 
-<div class="body-content">
+<div class="container">
     <div class="home">
-        <nav class="nav-1 nav-home" id="nav-home" >
-            <li style="float: left; border: none;"><a href="category">All Categories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ดูทั้งหมด</i></a></li>
-            <li style="float: left; border: none;"><a href="#news">Flash Sale</a></li>
-            <li style="float: left; border: none;"><a href="#contact">ขายดีประจำสัปดาห์</a></li>
-            <li style="float: left; border: none;"><a class="lang" href="#new-product">สินค้ามใหม่</a></li>
+        <nav class="navbar navbar-expand-sm navbar-light fixed-top bg-white" style="top:115px" >
+            <ul class="navbar-nav">
+                <li class="nav-item border-right">
+                    <a class="nav-link h4" href="category">All Categories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ดูทั้งหมด</i></a>
+                </li>
+                <li class="nav-item border-right">
+                    <a class="nav-link h4" href="#news">Flash Sale</a>
+                </li>
+                <li class="nav-item border-right">
+                    <a class="nav-link h4" href="#contact">ขายดีประจำสัปดาห์</a>
+                </li>
+                <li class="nav-item border-right">
+                    <a class="nav-link h4" href="#new-product">สินค้ามใหม่</a>
+                </li>
+                {{-- <li class="nav-item border-right">
+                    <a class="nav-link h4" href="#vender">Vender <i class="arrow down"></i></a>
+                </li> --}}
+            </ul>
         </nav>
-        <div class="row" >
+        {{-- <div class="row" >
             <div class="col category-bar" >
                 @foreach($category_all as $category)
                 <?php $banner = explode('.',$category->banner)?>
@@ -54,8 +67,8 @@
                     <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
             </div>
-        </div>
-        <div class="row">
+        </div> --}}
+        {{-- <div class="row">
             <div class="col flash-sale">
                 <h1>FLASH SALE<h1>
                     <hr style="opacity: 0.3">
@@ -79,8 +92,8 @@
                 <button class="ctrl-btn pro-prev">Prev</button>
                 <button class="ctrl-btn pro-next">Next</button>
             </div>
-        </div>
-        <div id="new-product" class="row" style="margin-top: 50px">
+        </div> --}}
+        {{-- <div id="new-product" class="row" style="margin-top: 50px">
                 <img class="col-4" src="/img/promotion1.png" alt="">
 
                 <img class="col-4" src="/img/promotion2.png" alt="">
@@ -100,8 +113,8 @@
                <h1 style="display: inline">สินค้ามใหม่</h1>
                <h1  style="display: inline;margin-left:50px">สินค้ามแนะนำ</h1>
             </div>
-        </div>
-        <div class="row">
+        </div> --}}
+        {{-- <div class="row">
             <div  style=" margin-left: 2%;
             margin-right: 2%;">
                 <?php  $class = "";?>
@@ -109,9 +122,8 @@
                     @include('component.product-cart')
                 @endforeach
             </div>
-        </div>
+        </div> --}}
 
-        </div>
     </div>
 </div>
 

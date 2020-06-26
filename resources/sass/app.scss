@@ -3,19 +3,14 @@
 // Variables
 @import "variables";
 // Bootstrap
-// @import "~bootstrap/scss/bootstrap";
-@import "style";
-@import "home";
+@import "~bootstrap/scss/bootstrap";
+// @import "style";
+// @import "home";
 @import "nav";
-@import "responsive";
-@import "productslider";
-@import "product-cart";
-body {
-    margin: 0;
-    height: 10000px;
-    background-color: #efefef;
-}
-
+// @import "responsive";
+// @import "productslider";
+// @import "product-cart";
+// @import "product-detail";
 @font-face {
     font-family: DB Heavent-ul;
     src: url("/fonts/DB Heavent/DBHeaventUlLiv3.2.ttf");
@@ -96,15 +91,28 @@ body {
     src: url("/fonts/DB Heavent/DBHeaventItv3.2.ttf");
 }
 
+body {
+    margin: 0;
+    height: 10000px;
+    background-color: #efefef;
+}
+
+.container {
+    max-width: 1920px;
+    padding: 0px;
+}
+
 h1 {
     font-family: DB Heavent-medium, Helvetica, sans-serif;
 }
 
-h2 {
+h2,
+.h2 {
     font-family: DB Heavent-regular, Helvetica, sans-serif;
 }
 
-h3 {
+h3,
+.h3 {
     font-family: DB Heavent-light, Helvetica, sans-serif;
 }
 
@@ -119,7 +127,6 @@ h4 {
 }
 
 .nav-home,
-input[type="text"],
 select {
     font-family: DB Heavent-medium, Helvetica, sans-serif;
     font-size: 20px;

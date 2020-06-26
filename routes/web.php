@@ -18,7 +18,8 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', 'HomeController@index');
-Route::get('/product', 'ProductController@index');
+Route::get('category','CategoryController@index');
+Route::get('product/{id}', 'ProductController@index');
 
 Route::get('about', function()
 {
@@ -33,9 +34,8 @@ Route::get('contact', function()
     return View::make('pages.contact');
 });
 
-Route::get('category','CategoryController@index');
 
 
-Route::get('test', function() {
+Route::get('test/3', function() {
     return View::make('test');
  });

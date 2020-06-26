@@ -1,7 +1,5 @@
 
-
-
-  {{-- <nav class="nav-1" id="nav-1">
+  <nav class="nav-1" id="nav-1">
     <li><a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="responsiveFun()">&#9776;</a></li>
     <li onclick="myFunction()"><a class="" >บันชีผู้ใช้ <i class="arrow down"></i></a></li>
     <li><a href="#news">วิชลิสส์ของฉัน</a></li>
@@ -9,62 +7,7 @@
     <li><a class="lang" href="#lang">ภาษาไทย <i class="arrow down"></i></a></li>
     <li><a class="vender" href="#vender"> Vender <i class="arrow down"></i></a></li>
 
-  </nav> --}}
-<nav class="navbar navbar-expand-lg navbar-light fixed-top nav1">
-{{-- navbar navbar-expand-sm bg-light justify-content-end fixed-top --}}
-    <div class="container container-nav">
-    <a class="navbar-brand" href="#"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-        <div class="collapse navbar-collapse  justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item border-right">
-                    <a class="nav-link h4" href="#vender">Vender <i class="arrow down"></i></a>
-                </li>
-                <li class="nav-item border-right">
-                    <a class="nav-link h4" href="#lang">ภาษาไทย <i class="arrow down"></i></a>
-                </li>
-                <li class="nav-item border-right">
-                    <a class="nav-link h4" href="#contact">เปรียบเทียบ</a>
-                </li>
-                <li class="nav-item border-right">
-                    <a class="nav-link h4" href="#news">วิชลิสส์ของฉัน</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link h4" >บัญชีผู้ใช้<i class="arrow down"></i></a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<nav class="navbar navbar-expand-sm navbar-light fixed-top nav2">
-    <div class="container container-nav">
-    <a class="navbar-brand col-2" href="#">
-      <img src="/img/logo1.png" alt="logo"style="max-width: 200px" >
-    </a>
-
-    <!-- Links -->
-    <ul class="navbar-nav col-12">
-      <li class="col-9">
-        {{-- <a class="nav-link" href="#">Link 1</a> --}}
-        <input type="text" class="search nav-link"  name="search" placeholder="ค้นหา" style="display: inline;width:100% !important">
-      </li>
-      <li class="">
-        {{-- <a class="nav-link" href="#">Link 1</a> --}}
-        <img src="/img/smart-cart.svg" id="basket" style="max-width: 40px">
-      </li>
-      <li class="">
-        {{-- <a class="nav-link" href="#">Link 1</a> --}}
-        <img src="/img/notification.svg" id="notification"  style="max-width: 40px">
-      </li>
-
-    </ul>
-</div>
-</nav>
-
-{{--
+  </nav>
 
     <a  href="/"><img class="logo logo1" src="/img/logo1.png"/></a>
     <img class="logo logo2" id="logo" src="/img/logo2.png"  />
@@ -74,10 +17,6 @@
   <nav class="nav-2" id="nav-2" >
         <li class="nav-li-2" style="width: 60%"><input type="text" class="search"  name="search" placeholder="ค้นหา" style="display: inline"></li>
   </nav>
-
-
-
-
 
 
   <div id="myDropdown" class="dropdown-content" >
@@ -114,7 +53,7 @@
             <img src="/img/logo1.png"  alt="" style="width: 50%">
             <div>
                 <a id="login-btn" class="btn  btn-active" href="javascript:void(0);" ><h3 style="display: inline">เข้าสู่ระบบ</h3><a>
-                <a id="register-btn" class="btn" href="javascript:void(0);" ><h3 style="display: inline">สมัครสมาชิก</h3></a>
+                <a id="register-btn" class="btn " href="javascript:void(0);" ><h3 style="display: inline">สมัครสมาชิก</h3></a>
             </div>
             <div id="login-form" class="login-form">
                 <div>
@@ -240,4 +179,4 @@ $(document).ready(function(){
 
   });
 })
-</script> --}}
+</script>

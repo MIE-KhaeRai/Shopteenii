@@ -7,21 +7,10 @@ use App\Product;
 
 class ProductController extends Controller
 {
-    public function index()
+    public function index($id)
     {
-        $product_all = [];
-        return $product =  Product::select('title')->get();
+        $product =  Product::where('product_id',$id)->get();
 
-        // foreach ($category as $key => $value) {
-        //     if($value->data_subdets!="[]"){
-        //         $value['data_subdets'] = json_decode($value->data_subdets);
-
-        //     }else{
-        //         $value['data_subdets'] = [['sub_name'=>'no']];
-        //     }
-        //     array_push($category_all,json_decode($value));
-        // }
-        // // return $category_all;
-        // return view('pages.home', compact('category_all', 'category_all'));
+        return view('pages.product-detail', compact('product'));
     }
 }
