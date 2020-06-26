@@ -23,7 +23,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('login','LoginController@postProcess');
 
 // //Register function
-// Route::post('register','RegisterController@register');
+Route::post('register','Auth\RegisterController@store');
+
+// Route::post('register', function ()
+// {
+//   return 'yes';
+// });
 
 
 

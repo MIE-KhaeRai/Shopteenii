@@ -16,7 +16,7 @@
               
             }
               else{
-                    return redirect('/loginPage');//Roll back to login page
+                    return redirect('/login');//Roll back to login page
                 }  
         }
                     
@@ -25,17 +25,18 @@
                 $pass = $request->input('password');
                 if(Auth::attempt(['email' => $email,'password'=> $pass])){
                        $user = Auth::user();   
-                        // return $user->name;
-                      if($user->name == "admin"){
-                        return response()->json(['message'=>"Welcome Admin"]);
-                      }
-                       else if($user->name == "vendor"){
-                            return response()->json(['message'=>"Welcome Vendor"]);
+                        // return $user->user_type;
+                      if($user->user_type == 2){//admin
+                        return $user;
                        }
-                            
-                           else if($user->name == "customer"){
-                                return response()->json(['message'=>"Welcome Customer"]);
-                                }
+                       if($user->user_type == 0){//customer
+                        return $user;
+                       }
+                       if($user->user_type == 1){//vendor
+                        return $user;
+                       }
+                       
+       
                             
                             
                 }

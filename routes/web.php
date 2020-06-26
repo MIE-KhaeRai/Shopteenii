@@ -40,10 +40,17 @@ Route::get('test', function() {
     return View::make('test');
  });
 
- Route::get('/login',function(){
-    return View::make('pages.login');
+ Route::get('/loginweb',function(){
+    return View::make('pages.loginweb');
+ })->name('loginweb');
 
- })->name('login');
+// Route::post('/register',function(){
+//     return View::make('pages.register');
+// })->name('register');register
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/auth/redirect/{provider}', 'SocialController@redirect');
+Route::get('/callback/{provider}', 'SocialController@callback');

@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('LoginNNNNNN') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="">
                         @csrf
 
                         <div class="form-group row">
@@ -65,6 +65,12 @@
                             </div>
                         </div>
                     </form>
+                    <hr>
+                    <div class="form-group row mb-0">
+                        <div class="col-md-8 offset-md-4">
+                            <a href="{{ url('/auth/redirect/facebook') }}" class="btn btn-primary"><i class="fa fa-facebook"></i> Facebook</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

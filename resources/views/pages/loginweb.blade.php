@@ -1,5 +1,4 @@
 
-
 <div class="row">
     <div class="col-md-4 col-md-offset-4">
         <div class="login-panel panel panel-default">
@@ -12,11 +11,11 @@
             </div>
             @endif
             <div class="panel-body">
-                <form role="form" method="POST" action="{{ url('/admin/login/process') }}">
+                <form role="form" method="POST" action="/loginweb">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <fieldset>
                         <div class="form-group">
-                            <input class="form-control" placeholder="Username" name="username" type="text" autofocus value="{{old('username')}}" />
+                            <input class="form-control" placeholder="Email" name="username" type="text" autofocus value="{{old('username')}}" />
                             {!!$errors->first('username', '<span class="control-label color-red" for="username">*:message</span>')!!}
                         </div>
                         <div class="form-group">

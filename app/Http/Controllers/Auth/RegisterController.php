@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
+use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
@@ -36,10 +37,11 @@ class RegisterController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('guest');
-    }
+    // public function __construct(Request $request)
+    // {
+    //     // $this->middleware('guest');
+    //     $this->validator($request);
+    // }
 
     /**
      * Get a validator for an incoming registration request.
@@ -47,13 +49,23 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data)
+    protected function validator(Request $request)
     {
-        return Validator::make($data, [
+        // dd(gettype($request));
+        $request = (array)$request;
+        // dd(gettype($request));
+         Validator::make($request, [
             'name' => ['required', 'string', 'max:255'],
+            'surname' => ['required','string','max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'phone' =>['required','string','max:10'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            // 'user_pic' => ['required','image'],
+            'user_type' => ['required', 'integer' ,'max:3'],
+            // 'facebook_id' =>['requird']
         ]);
+
+        return $request;
     }
 
     /**
@@ -62,17 +74,58 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
+    protected function create(Request $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'surname' => $data['surname'],
-            'email' => $data['email'],
-            'phone' => $data['phone'],
-            'password' => Hash::make($data['password']),
-            'user_pic' => $data['user_pic'],
-            'facebook_id' => $data['facebook_id'],  
-            'google_id' => $data['google_id'],
-        ]);
+        // die('<per>'.print_r($data,1));
+        // dd($data);
+        // return User::create([
+        //     'name' => $data['name'],
+        //     'surname' => $data['surname'],
+        //     'email' => $data['email'],
+        //     'phone' => $data['phone'],
+        //     'password' => Hash::make($data['password']),
+        //     // 'user_pic' => $data['user_pic'],
+        //     'user_type' => $data['user_type'],
+            
+        // ]);
     }
+
+    public function store(Request $request)
+    {
+        
+        // validate incoming request
+        
+        $validator = Validator::make($request->all(), [
+        //    'email' => 'required|email|unique:users',
+        //    'name' => 'required|string|max:50',
+        //    'password' => 'required'
+           'name' => ['required', 'string', 'max:255'],
+           'surname' => ['required','string','max:255'],
+           'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+           'phone' =>[],
+           'password' => ['required','min:8'],
+           // 'user_pic' => ['required','image'],
+           'user_type' => ['required', 'integer' ,'max:3'],
+       ]);
+
+    //    return $validator;
+        
+       if ($validator->fails()) {
+            // Session::flash('error', $validator->messages()->first());
+            // return redirect()->back()->withInput();
+            return  response()->json(['error'=> $validator->messages()->first()]);
+       }
+            
+       // finally store our user
+       return User::create([
+            'name' => $request['name'],
+            'surname' => $request['surname'],
+            'email' => $request['email'],
+            'phone' => $request['phone'],
+            'password' => Hash::make($request['password']),
+            // 'user_pic' => $data['user_pic'],
+            'user_type' => $request['user_type'],
+            
+        ]);
+}
 }
