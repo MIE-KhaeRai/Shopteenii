@@ -40,17 +40,25 @@ Route::get('test', function() {
     return View::make('test');
  });
 
- Route::get('/loginweb',function(){
-    return View::make('pages.loginweb');
- })->name('loginweb');
 
-// Route::post('/register',function(){
-//     return View::make('pages.register');
-// })->name('register');register
-
+//function authentication from laravel framework
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/auth/redirect/{provider}', 'SocialController@redirect');
-Route::get('/callback/{provider}', 'SocialController@callback');
+// //login via facebook
+// Route::get('/auth/redirect/{provider}', 'SocialController@redirect');
+// Route::get('/callback/{provider}', 'SocialController@callback');
+
+//vertification
+// Route::get('/',function(){
+//     return view('welcome');
+// });
+// Auth::routes(['verify'=> true]);
+// Route::get('/home','Homecontroller@index')->name('home');
+
+
+
+
+
+
+
