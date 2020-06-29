@@ -39,3 +39,7 @@ Route::get('contact', function()
 Route::get('test/3', function() {
     return View::make('test');
  });
+
+
+ Route::get('payment/{id}', 'PaymentController@index');
+ Route::post('paymentmobilebankingprocess', 'PaymentController@store')->name('paymentmobilebankingprocess');

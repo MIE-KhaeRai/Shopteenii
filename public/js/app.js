@@ -37316,9 +37316,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/matsafikbesa/Desktop/Shopteenii/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /Users/matsafikbesa/Desktop/Shopteenii/resources/sass/app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! /Users/matsafikbesa/Desktop/Shopteenii/resources/sass/app1.scss */"./resources/sass/app1.scss");
+__webpack_require__(/*! /Users/amang/multi-innovation-work/Shopteenii/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /Users/amang/multi-innovation-work/Shopteenii/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /Users/amang/multi-innovation-work/Shopteenii/resources/sass/app1.scss */"./resources/sass/app1.scss");
 
 
 /***/ })
