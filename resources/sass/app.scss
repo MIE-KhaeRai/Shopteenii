@@ -5,10 +5,10 @@
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
 // @import "style";
-// @import "home";
+@import "home";
 @import "nav";
-// @import "responsive";
-// @import "productslider";
+@import "responsive";
+@import "productslider";
 // @import "product-cart";
 // @import "product-detail";
 @font-face {
@@ -91,39 +91,40 @@
     src: url("/fonts/DB Heavent/DBHeaventItv3.2.ttf");
 }
 
+.container {
+    max-width: 1400px;
+}
+
 body {
     margin: 0;
     height: 10000px;
     background-color: #efefef;
+    padding-top: 150px !important;
 }
 
-.container {
-    max-width: 1920px;
-    padding: 0px;
+.row {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
 }
 
-h1 {
-    font-family: DB Heavent-medium, Helvetica, sans-serif;
+.bold {
+    font-family: DB Heavent-bold, Helvetica, sans-serif;
 }
 
-h2,
-.h2 {
+.regular {
     font-family: DB Heavent-regular, Helvetica, sans-serif;
 }
 
-h3,
-.h3 {
-    font-family: DB Heavent-light, Helvetica, sans-serif;
+.medium {
+    font-family: DB Heavent-medium, Helvetica, sans-serif;
 }
 
-h4 {
+.thin {
     font-family: DB Heavent-thin, Helvetica, sans-serif;
 }
 
-.nav-1 {
-    font-family: DB Heavent-light, Helvetica, sans-serif;
-    font-size: 20px;
-    color: #0f0f0f;
+.light {
+    font-family: DB Heavent-Light, Helvetica, sans-serif;
 }
 
 .nav-home,
@@ -149,6 +150,22 @@ select {
 a {
     color: black;
     text-decoration-line: none;
+}
+
+.rounded {
+    border-radius: 8px !important;
+}
+
+.modal-backdrop {
+    /* bug fix - no overlay */
+    display: none;
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #f8eaf3;
+    color: $pink;
+    border: none !important;
 }
 
 //

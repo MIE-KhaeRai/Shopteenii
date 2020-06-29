@@ -13,7 +13,7 @@ class HomeController extends Controller
     {
         $category_all = [];
         $category =  Category::orderBy('category_name','ASC')->get();
-        $product_all = Product::orderBy('product_id','ASC')->get();
+        $product_all = Product::orderBy('product_id','ASC')->take(18)->get();
         foreach ($category as $key => $value) {
             if($value->data_subdets!="[]"){
                 $value['data_subdets'] = json_decode($value->data_subdets);

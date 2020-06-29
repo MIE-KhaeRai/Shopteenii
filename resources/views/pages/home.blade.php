@@ -2,134 +2,301 @@
 @section('content')
 
 <div class="container">
-    <div class="home">
-        <nav class="navbar navbar-expand-sm navbar-light fixed-top bg-white" style="top:115px" >
-            <ul class="navbar-nav">
+    {{-- ////////////////////////////////////nav-home//////////////////////////////////// --}}
+    <div class="row">
+        <nav class="navbar navbar-expand navbar-light fixed-top bg-white nav-home "  id="nav-home">
+            <div class="container">
+            <ul class="navbar-nav ">
                 <li class="nav-item border-right">
-                    <a class="nav-link h4" href="category">All Categories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ดูทั้งหมด</i></a>
+                    <a class="nav-link h4 medium mr-2" href="category">All Categories
+                        <u class="ml-4 pink">ดูทั้งหมด</u>
+                    </a>
                 </li>
                 <li class="nav-item border-right">
-                    <a class="nav-link h4" href="#news">Flash Sale</a>
+                    <a class="nav-link h4 medium ml-2 mr-2" href="#flash-sale">Flash Sale</a>
                 </li>
-                <li class="nav-item border-right">
-                    <a class="nav-link h4" href="#contact">ขายดีประจำสัปดาห์</a>
+                <li class="nav-item border-right ml-2 mr-2">
+                    <a class="nav-link h4 medium ml-2 mr-2" href="#contact">ขายดีประจำสัปดาห์</a>
                 </li>
-                <li class="nav-item border-right">
-                    <a class="nav-link h4" href="#new-product">สินค้ามใหม่</a>
+                <li class="nav-item border-right ">
+                    <a class="nav-link h4 medium ml-2 mr-2" href="#new-product">สินค้าใหม่</a>
                 </li>
-                {{-- <li class="nav-item border-right">
-                    <a class="nav-link h4" href="#vender">Vender <i class="arrow down"></i></a>
-                </li> --}}
             </ul>
+            </div>
         </nav>
-        {{-- <div class="row" >
-            <div class="col category-bar" >
-                @foreach($category_all as $category)
-                <?php $banner = explode('.',$category->banner)?>
-                    <a class="category" href="#">
-                        <h4 style="margin-top: 5px">
-                            <img src="/img/category/{{$banner[0]}}.svg" alt="" style="width: 20px; transform: translate(-50%, 30%)"> {{ $category->category_name }}
-                        </h4>
-                        <div class="sub-category">
-                            <div style="width:75%">
-                                <div class="column" >
-                                    @foreach($category->data_subdets as $value)
-                                        <h4 style="float: left;width:30%;color:#747474;margin:10px">{{$value->sub_name}}</h4>
-                                    @endforeach
+    </div>
+        {{-- ////////////////////////////////////category//////////////////////////////////// --}}
+
+    <div class="row justify-content-center">
+        <div class="card col-lg-3 col-md-3 d-sm-none d-none d-md-block  white border-0 rounded pl-xl-5 pl-lg-3 pl-md-0 pt-3 pr-0 scroll"  style="height:35vw;max-height:500px">
+            @foreach($category_all as $category)
+            <?php $banner = explode('.',$category->banner)?>
+            <div class="row category">
+                <a class="" href="#">
+                    <img src="/img/category/{{$banner[0]}}.svg" alt="" style="width:20px;" class="d-none d-lg-inline-block">
+                    <h4 class="light d-inline-block ml-3 mt-1">{{ $category->category_name }}</h4>
+                    <div class="sub-category col-8 border-0 p-4">
+                        <div class="d-inline-block col-9">
+                            <div class="row">
+                                @foreach($category->data_subdets as $value)
+                                <div class="col-4">
+                                    <a class="" href="#">
+                                        <h4 class="light mt-3">{{$value->sub_name}}</h4>
+                                    </a>
                                 </div>
-                            </div>
-                            <div style="width:25%;position: absolute;margin-left:75%">
-                                <div class="column" >
-                                    <h3 style="float: left;width:30%;color:#000000;margin:10px">แบรนด์<hr style="color: #b8b8b8"></h3>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
-                    </a>
-                @endforeach
-            </div>
-            <div class="col slide-bar">
-                <div class="mySlides">
-                    <img src="/img/slides1 copy.png" style="width:100%;height:35vw;border-radius:8px">
-                </div>
-                <div class="mySlides">
-                    <img src="/img/slides2.jpg" style="width:100%;height:35vw;border-radius:8px">
-                </div>
-                <div class="mySlides">
-                    <img src="/img/slides3.jpg" style="width:100%;height:35vw;border-radius:8px">
-                </div>
-
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" style="margin-right:1%;" onclick="plusSlides(1)">&#10095;</a>
-
-                <div style="text-align:center;clear: both;">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                </div>
-            </div>
-        </div> --}}
-        {{-- <div class="row">
-            <div class="col flash-sale">
-                <h1>FLASH SALE<h1>
-                    <hr style="opacity: 0.3">
-                <div class="slider" id="slider">
-                    <div class="slide" id="slide">
-                        <?php
-                        $product_flash = [];
-                        $class = "flash";
-                        foreach ($product_all as $key => $value) {
-                           if($value->front_image!='0'&&$value->front_image!=null){
-                                array_push($product_flash,$value);
-                           }
-                        }
-                        ?>
-                        @foreach ($product_flash as $item)
-                            @include('component.product-cart')
-                        @endforeach
+                        <div class="d-inline-block col-2" >
+                            <h3 class="regular" style="color: black">แบรนด์<hr style="color: #000000"></h3>
+                        </div>
                     </div>
+                </a>
 
-                </div>
-                <button class="ctrl-btn pro-prev">Prev</button>
-                <button class="ctrl-btn pro-next">Next</button>
             </div>
-        </div> --}}
-        {{-- <div id="new-product" class="row" style="margin-top: 50px">
-                <img class="col-4" src="/img/promotion1.png" alt="">
-
-                <img class="col-4" src="/img/promotion2.png" alt="">
-
-                <img class="col-4" src="/img/promotion3.png" alt="">
+            @endforeach
         </div>
-        <div  class="row">
-            <div style=" margin-left: 3%;
-            margin-right: 3%;
-            margin-top:50px;
-            background-color:rgb(255, 255, 255);
-            border-radius: 8px;
-            clear: both;
-            position: relative;
-            color: #666666;
-            padding: 30px 50px;">
-               <h1 style="display: inline">สินค้ามใหม่</h1>
-               <h1  style="display: inline;margin-left:50px">สินค้ามแนะนำ</h1>
-            </div>
-        </div> --}}
-        {{-- <div class="row">
-            <div  style=" margin-left: 2%;
-            margin-right: 2%;">
-                <?php  $class = "";?>
-                @foreach ($product_all as $item)
-                    @include('component.product-cart')
-                @endforeach
-            </div>
-        </div> --}}
 
+        {{-- ////////////////////////////////////slider//////////////////////////////////// --}}
+
+        <div class="col-lg-9 col-md-9 mt-3" >
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100 rounded" style="max-height:45vw" src="/img/slides1.png" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100 rounded" style="max-height:45vw" src="/img/slides2.png" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100 rounded" style="max-height:45vw" src="/img/slides3.png" alt="Third slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+        </div>
     </div>
+    {{-- ////////////////////////////////////flash sale//////////////////////////////////// --}}
+
+    <?php
+        $product_flash = [];
+        $class = "item";
+        foreach ($product_all as $key => $value) {
+            if($value->front_image!='0'&&$value->front_image!=null){
+                array_push($product_flash,$value);
+            }
+        }
+        ?>
+    <div data-spy="scroll" data-target="#nav-home" data-offset="0">
+        <div class="row justify-content-center ">
+            <div class="card col-11 mt-4 white border-0 rounded p-4 " id="flash-sale" style="">
+                <div class="row">
+                    <div class="d-flex justify-content-between col-12">
+                        <h1 class="regular black">FLash Sale</h1>
+                        <button type="button" class="btn btn-primary btn-sm"><h4 class="regular">ดูสินค้าทั้งหมด</h4></button>
+                    </div>
+                </div>
+
+                <hr>
+                        <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
+                            <div class="MultiCarousel-inner">
+
+                                @foreach($product_flash as $item)
+                                    @include('component.product-cart')
+                                @endforeach
+                            </div>
+                            <button class="btn btn-primary leftLst"><</button>
+                            <button class="btn btn-primary rightLst">></button>
+                        </div>
+
+            </div>
+        </div>
+    </div>
+    {{-- ////////////////////////////////////promotion//////////////////////////////////// --}}
+
+        <div id="promotion" class="row mt-5">
+            <div class="col m-0 p-0 nav-link">
+                <a href="/promotion"><img class="col-12  m-0 p-1" src="/img/promotion1.png" alt="" ></a>
+            </div>
+            <div class="col  m-0 p-0 nav-link">
+                <a href="/promotion" ><img  class="col-12  m-0 p-1"  src="/img/promotion2.png" alt=""></a>
+            </div>
+            <div class="col  m-0 p-0 nav-link">
+                <a href="/promotion" ><img  class="col-12  m-0 p-1"  src="/img/promotion3.png" alt=""></a>
+            </div>
+
+{{--
+                <img href="/category" class="col-4" src="/img/promotion2.png" alt="">
+
+                <img href="#" class="col-4" src="/img/promotion3.png" alt=""> --}}
+        </div>
+
+    {{-- ////////////////////////////////////product//////////////////////////////////// --}}
+    <div class="row justify-content-center ">
+        <div class="card col-11 mt-3 white border-0 rounded pt-3 mb-2 pb-2" id="flash-sale" style="">
+            <div class="d-flex justify-content-start">
+                <a class="nav-link h2 medium ml-2 mr-2" href="#new-product">สินค้าใหม่</a>
+                <a class="nav-link h2 medium ml-2 mr-2" href="#new-product">สินค้าแนะนำ</a>
+            </div>
+
+        </div>
+    </div>
+
+        <div class="">
+            <div>
+                <?php  $class = "";
+                // $product_all = (array)$product_all
+                ?>
+                {{-- @foreach ($product_all as $item)
+                    @include('component.product-cart')
+                @endforeach --}}
+                <div class="row mt-lg-1 pt-lg-1 ml-lg-5 pl-lg-5 mr-lg-5 pr-lg-5 m-md-4 p-md-4 m-sm-1 p-sm-1 p-0 m-0">
+                    @foreach($product_all->split($product_all->count()) as $row)
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-6 p-1 ">
+                            @foreach($row as $item)
+                                @include('component.product-cart')
+                            @endforeach
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+
+
 </div>
 
 
 
     <script>
+
+
+
+
+
+$(document).ready(function () {
+    var itemsMainDiv = ('.MultiCarousel');
+    var itemsDiv = ('.MultiCarousel-inner');
+    var itemWidth = "";
+
+    $('.leftLst, .rightLst').click(function () {
+        var condition = $(this).hasClass("leftLst");
+        if (condition)
+            click(0, this);
+        else
+            click(1, this)
+    });
+
+    ResCarouselSize();
+
+
+
+
+    $(window).resize(function () {
+        ResCarouselSize();
+    });
+
+    //this function define the size of the items
+    function ResCarouselSize() {
+        var incno = 0;
+        var dataItems = ("data-items");
+        var itemClass = ('.item');
+        var id = 0;
+        var btnParentSb = '';
+        var itemsSplit = '';
+        var sampwidth = $(itemsMainDiv).width();
+        var bodyWidth = $('body').width();
+        $(itemsDiv).each(function () {
+            id = id + 1;
+            var itemNumbers = $(this).find(itemClass).length;
+            btnParentSb = $(this).parent().attr(dataItems);
+            itemsSplit = btnParentSb.split(',');
+            $(this).parent().attr("id", "MultiCarousel" + id);
+
+
+            if (bodyWidth >= 1200) {
+                incno = itemsSplit[3];
+                itemWidth = sampwidth / incno;
+            }
+            else if (bodyWidth >= 992) {
+                incno = itemsSplit[2];
+                itemWidth = sampwidth / incno;
+            }
+            else if (bodyWidth >= 768) {
+                incno = itemsSplit[1];
+                itemWidth = sampwidth / incno;
+            }
+            else {
+                incno = itemsSplit[0];
+                itemWidth = sampwidth / incno;
+            }
+            $(this).css({ 'transform': 'translateX(0px)', 'width': itemWidth * itemNumbers });
+            $(this).find(itemClass).each(function () {
+                $(this).outerWidth(itemWidth);
+            });
+
+            $(".leftLst").addClass("over");
+            $(".rightLst").removeClass("over");
+
+        });
+    }
+
+
+    //this function used to move the items
+    function ResCarousel(e, el, s) {
+        var leftBtn = ('.leftLst');
+        var rightBtn = ('.rightLst');
+        var translateXval = '';
+        var divStyle = $(el + ' ' + itemsDiv).css('transform');
+        var values = divStyle.match(/-?[\d\.]+/g);
+        var xds = Math.abs(values[4]);
+        if (e == 0) {
+            translateXval = parseInt(xds) - parseInt(itemWidth * s);
+            $(el + ' ' + rightBtn).removeClass("over");
+
+            if (translateXval <= itemWidth / 2) {
+                translateXval = 0;
+                $(el + ' ' + leftBtn).addClass("over");
+            }
+        }
+        else if (e == 1) {
+            var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
+            translateXval = parseInt(xds) + parseInt(itemWidth * s);
+            $(el + ' ' + leftBtn).removeClass("over");
+
+            if (translateXval >= itemsCondition - itemWidth / 2) {
+                translateXval = itemsCondition;
+                $(el + ' ' + rightBtn).addClass("over");
+            }
+        }
+        $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');
+    }
+
+    //It is used to get some elements from btn
+    function click(ell, ee) {
+        var Parent = "#" + $(ee).parent().attr("id");
+        var slide = $(Parent).attr("data-slide");
+        ResCarousel(ell, Parent, slide);
+    }
+
+});
+
+
+
+
+
+//////////////////////////////////
     var slideIndex = 1;
     showSlides(slideIndex);
 

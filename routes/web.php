@@ -21,9 +21,9 @@ Route::get('/', 'HomeController@index');
 Route::get('category','CategoryController@index');
 Route::get('product/{id}', 'ProductController@index');
 
-Route::get('about', function()
+Route::get('promotion', function()
 {
-    return View::make('pages.about');
+    return View::make('pages.promotion');
 });
 Route::get('projects', function()
 {

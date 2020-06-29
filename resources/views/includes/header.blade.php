@@ -1,45 +1,76 @@
 
 
-
-  {{-- <nav class="nav-1" id="nav-1">
-    <li><a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="responsiveFun()">&#9776;</a></li>
-    <li onclick="myFunction()"><a class="" >บันชีผู้ใช้ <i class="arrow down"></i></a></li>
-    <li><a href="#news">วิชลิสส์ของฉัน</a></li>
-    <li><a href="#contact">เปรียบเทียบ</a></li>
-    <li><a class="lang" href="#lang">ภาษาไทย <i class="arrow down"></i></a></li>
-    <li><a class="vender" href="#vender"> Vender <i class="arrow down"></i></a></li>
-
-  </nav> --}}
 <nav class="navbar navbar-expand-lg navbar-light fixed-top nav1">
-{{-- navbar navbar-expand-sm bg-light justify-content-end fixed-top --}}
-    <div class="container container-nav">
+    <div class="container">
     <a class="navbar-brand" href="#"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" href="javascript:void(0);" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
-        <div class="collapse navbar-collapse  justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav">
+        <div class="collapse navbar-collapse  justify-content-end" id="navbarSupportedContent" >
+            <ul class="navbar-nav" style="z-index: 3 !important">
                 <li class="nav-item border-right">
-                    <a class="nav-link h4" href="#vender">Vender <i class="arrow down"></i></a>
+                    <img style="width:20px;" class="d-inline-block" src="/img/Group 33.svg" />
+                    <a class="d-inline-block nav-link h4 light" href="#vender">Vender <i class="arrow down"></i></a>
                 </li>
                 <li class="nav-item border-right">
-                    <a class="nav-link h4" href="#lang">ภาษาไทย <i class="arrow down"></i></a>
+                    <a class="nav-link h4 light" href="#lang">ภาษาไทย <i class="arrow down"></i></a>
                 </li>
                 <li class="nav-item border-right">
-                    <a class="nav-link h4" href="#contact">เปรียบเทียบ</a>
+                    <a class="nav-link h4 light" href="#contact">เปรียบเทียบ</a>
                 </li>
                 <li class="nav-item border-right">
-                    <a class="nav-link h4" href="#news">วิชลิสส์ของฉัน</a>
+                    <a class="nav-link h4 light" href="#news">วิชลิสส์ของฉัน</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link h4" >บัญชีผู้ใช้<i class="arrow down"></i></a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link h4 light" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >บัญชีผู้ใช้<i class="arrow down"></i></a>
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                          {{-- <a class="dropdown-item" href="#">Action</a> --}}
+                            <div class="container p-0" style="width: 250px">
+                                <div class="row mt-2">
+                                    <div class="col-12">
+                                        <h3 class="medium">ยินดีต้อนรับ</h3>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-6">
+                                        <button style="width: 100px"  id="login" name="login" type="button" class="btn btn-primary"><h5 class="regular  mb-0 pb-0">เข้าสู่ระบบ</h5></button>
+                                    </div>
+                                    <div class="col-6">
+                                        <form action="https://www.shopteenii.com/home/login_set/registration" style="float: right">
+                                            <button style="width: 100px"  id="register" name="register" type="submit" class="btn btn-primary"><h5 class="regular  mb-0 pb-0">สมัครสมาชิก</h5></button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col">
+                                        <input type="button" class="btn btn-primary" value="เข้าระบบด้วย Facebook">
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col">
+                                        <input type="button" class="btn btn-primary " value="เข้าระบบด้วย Gmail">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row mt-2">
+                                    <div class="col-12">
+                                        <a class="nav-link h5 light" href="#contact">คำสั่งซื้อของฉัน</a>
+                                        <a class="nav-link h5 light" href="#contact">คูปองของฉัน</a>
+                                        <a class="nav-link h5 light" href="#contact">วิชลิสต์ของฉัน</a>
+                                        <a class="nav-link h5 light" href="#contact">เปรียบเทียบ</a>
+                                    </div>
+                                </div>
+                        </div>
+                          </div>
+
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-<nav class="navbar navbar-expand navbar-light fixed-top nav2 justify-content-center">
+<nav class="navbar navbar-expand navbar-light fixed-top nav2 justify-content-center" id="nav-2">
     <div class="container container-nav row">
         <a class="navbar-brand col-lg-2 col-md-2 col-sm-2 col-2" href="/">
         <img class="d-none d-lg-block" src="/img/logo1.png" alt="logo"style="max-width: 220px;margin-left:20px"  >
@@ -63,22 +94,10 @@
     </div>
 </nav>
 
+
+
+
 {{--
-
-    <a  href="/"><img class="logo logo1" src="/img/logo1.png"/></a>
-    <img class="logo logo2" id="logo" src="/img/logo2.png"  />
-    <img src="/img/smart-cart.svg" id="basket" class="logo basket" >
-    <img src="/img/notification.svg" id="notification" class="logo notification" >
-
-  <nav class="nav-2" id="nav-2" >
-        <li class="nav-li-2" style="width: 60%"><input type="text" class="search"  name="search" placeholder="ค้นหา" style="display: inline"></li>
-  </nav>
-
-
-
-
-
-
   <div id="myDropdown" class="dropdown-content" >
       <h2>ยินดีต้อนรับ</h2>
       <div class="row">
@@ -103,9 +122,9 @@
           <h3>วิชลิสต์ของฉัน</h3>
           <h3>เปรียบเทียบ</h3>
       </div>
-    </div>
+    </div> --}}
 
-    <div id="myModal" class="modal">
+    {{-- <div id="myModal" class="modal">
 
         <!-- Modal content -->
         <div class="modal-content" style="text-align:center">
@@ -155,28 +174,28 @@
             </div>
         </div>
 
-      </div>
+      {{-- </div> --}}
 
 <script>
 
 
     function responsiveFun() {
     var nav1 = document.getElementById("nav-1");
-    var nav2 = document.getElementById("nav-2");
+    var nav2 = document.getElementById("nav-home");
     var nav3 = document.getElementById("logo");
     var nav4 = document.getElementById("basket");
     var nav5 = document.getElementById("notification");
     var nav6 = document.getElementById("nav-home");
 
-    if (nav1.className === "nav-1") {
-        nav1.className += " responsive";
+    if (nav1.className === "navbar navbar-expand navbar-light fixed-top nav2 justify-content-center") {
+        nav1.className += " mt-95";
     } else {
-        nav1.className = "nav-1";
+        nav1.className = "navbar navbar-expand navbar-light fixed-top nav2 justify-content-center";
     }
-    if (nav2.className === "nav-2") {
-        nav2.className += " responsive1";
+    if (nav2.className === "navbar navbar-expand navbar-light fixed-top bg-white") {
+        nav2.className += " mt-95";
     } else {
-        nav2.className = "nav-2";
+        nav2.className = "navbar navbar-expand navbar-light fixed-top bg-white";
     }
     if (nav3.className === "logo logo2") {
     nav3.className += " responsive2";
@@ -239,4 +258,4 @@ $(document).ready(function(){
 
   });
 })
-</script> --}}
+</script>

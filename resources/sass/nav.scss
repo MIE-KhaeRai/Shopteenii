@@ -7,6 +7,7 @@
     top: 45px;
     background-color: $white;
     height: 70px !important;
+    z-index: 2 !important;
 }
 
 .border-right {
@@ -18,12 +19,18 @@
     padding-bottom: 0px;
 }
 
-a.nav-link {
-    font-family: DB Heavent-Light;
-}
-
 li.nav-item {
     height: 30px !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #0f0f0f;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+a:hover {
+    color: #858585;
+    opacity: 0.5;
 }
 
 .search,
