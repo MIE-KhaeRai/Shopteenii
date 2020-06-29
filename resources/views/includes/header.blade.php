@@ -36,12 +36,10 @@
   <div id="myDropdown" class="dropdown-content" >
       <h2>ยินดีต้อนรับ</h2>
       <div class="row">
-
       <form action="login" style="float: right">
         <input type="submit" name="login" class="button btn1" value="เข้าสู่ระบบ">
         </form>
-
-               <form action="https://www.shopteenii.com/home/login_set/registration" style="float: right">
+               <form action="register" style="float: right">
             <input type="submit"  class="button btn2" value="สมัครสมาชิก">
         </form>
       </div>

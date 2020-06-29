@@ -20,15 +20,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 // Login function
-Route::get('login','LoginController@postProcess');
+Route::post('login','LoginController@postProcess');
 
 // //Register function
-Route::post('register','Auth\RegisterController@store');
+Route::post('register','Auth\RegisterController@validator');
 
-// Route::post('register', function ()
-// {
-//   return 'yes';
-// });
+
 
 
 

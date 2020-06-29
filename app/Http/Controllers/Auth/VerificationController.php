@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\VerifiesEmails;
-
+use DB;
 class VerificationController extends Controller
 {
     /*
@@ -26,7 +26,28 @@ class VerificationController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = "/verify";
+
+
+    // public static function update(array $data){
+    //         DB::table('users')->where('email','=',$data['email'])->update($data);
+        
+    // }
+
+    public function verify(Request $request)
+    {   
+        $user = User::find($request->route('id'));
+
+        if ($user->hasVerifiedEmail()) {
+            return redirect($this->redirectPath());
+        }
+
+        if ($user->markEmailAsVerified()) {
+            event(new Verified($request->user()));
+        }
+
+        return redirect($this->redirectPath())->with('verified', true);
+    }
 
     /**
      * Create a new controller instance.

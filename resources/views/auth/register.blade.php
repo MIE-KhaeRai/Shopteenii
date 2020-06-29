@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('RegisteNNNNNNNr') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="/register" enctype="multipart/form-data" >
+                    <form method="POST" action="{{route('register')}}" enctype="multipart/form-data" >
                         @csrf
                         <!-- <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label> -->
@@ -72,7 +72,7 @@
                             </div>
                         <!-- </div> -->
                         
-                        <input type="text" name="user_type" >
+                        <input type="text" name="user_type" placeholder="userType">
 
                         <!-- <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('password') }}</label> -->
